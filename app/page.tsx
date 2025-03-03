@@ -14,7 +14,8 @@ export default function Home() {
   return (
     <div className="relative overflow-hidden">
       <Navbar />
-      <div className="min-h-screen overflow-x-hidden bg-[#100948] flex items-center justify-center px-4 relative">
+      <div className="min-h-screen overflow-x-hidden bg-[#100948] flex items-center justify-center px-4 relative pt-16 lg:pt-0">
+        {/* Background Particles */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Particles
             particleColors={["#8F86D9", "#ffffff"]}
@@ -35,7 +36,7 @@ export default function Home() {
               <div className="flex flex-col gap-1 text-center md:text-left">
                 {/* Nama */}
                 <BlurText
-                  text="I'm Muhammad Irfa' Maulana"
+                  text="I'm Muhammad Irfa' M."
                   delay={400}
                   animateBy="words"
                   direction="top"

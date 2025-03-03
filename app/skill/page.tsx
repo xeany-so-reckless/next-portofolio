@@ -1,14 +1,27 @@
 "use client";
-import Lanyard from "../components/Lanyard/Lanyard";
 import Particles from "../components/Particles/Particles";
 import Navbar from "../components/Navbar/Navbar";
+import { FaLaravel, FaReact, FaHtml5, FaCss3Alt, FaJs, FaDatabase } from "react-icons/fa";
+import { SiNextdotjs, SiMysql, SiPostman, SiLivewire, SiFilament } from "react-icons/si";
 
-export default function Skill() {
+const techStacks = [
+  { name: "Laravel", icon: <FaLaravel className="text-red-500" size={50} /> },
+  { name: "React", icon: <FaReact className="text-blue-400" size={50} /> },
+  { name: "Next.js", icon: <SiNextdotjs className="text-gray-200" size={50} /> },
+  { name: "MySQL", icon: <SiMysql className="text-blue-500" size={50} /> },
+  { name: "Postman", icon: <SiPostman className="text-orange-500" size={50} /> },
+  { name: "Livewire", icon: <SiLivewire className="text-red-400" size={50} /> },
+  { name: "Filament", icon: <SiFilament className="text-pink-500" size={50} /> },
+  { name: "HTML", icon: <FaHtml5 className="text-orange-500" size={50} /> },
+  { name: "CSS", icon: <FaCss3Alt className="text-blue-500" size={50} /> },
+  { name: "JavaScript", icon: <FaJs className="text-yellow-400" size={50} /> },
+];
+
+export default function TechStack() {
   return (
-    <div className="relative z-20 overflow-hidden" id="about">
+    <div className="relative z-20 overflow-hidden" id="techstack">
       <Navbar />
-      <div className="min-h-screen overflow-x-hidden bg-[#100948] flex items-center justify-center px-4">
-        {/* Partikel Latar Belakang */}
+      <div className="min-h-screen overflow-x-hidden bg-[#100948] flex flex-col items-center justify-center px-4 text-white text-center">
         <div className="absolute inset-0 w-full h-full">
           <Particles
             particleColors={["#8F86D9", "#ffffff"]}
@@ -21,23 +34,17 @@ export default function Skill() {
             disableRotation={false}
           />
         </div>
-
-        {/* Kontainer */}
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-12 h-screen items-center">
-            {/* Bagian Kiri - Teks / Deskripsi */}
-            <div className="md:col-span-6 flex flex-col justify-center items-center md:items-start h-full p-4 md:pl-8">
-              <h2 className="text-white text-4xl font-bold">About My Skill</h2>
-              <p className="text-gray-300 mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Integer nec odio. Praesent libero.
-              </p>
-            </div>
-
-            {/* Bagian Kanan - Lanyard */}
-            {/* <div className="md:col-span-6 flex justify-center items-center">
-              <Lanyard position={[0, 0, 17]} gravity={[0, -40, 0]} />
-            </div> */}
+        <div className="relative z-10 max-w-4xl mx-auto py-10">
+          <p className="text-gray-300 mb-6">
+            Berikut adalah teknologi yang saya gunakan dalam pengembangan web.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {techStacks.map((tech, index) => (
+              <div key={index} className="flex flex-col items-center gap-3 p-4 bg-[#1a103d] rounded-lg shadow-lg hover:scale-105 transition-all">
+                {tech.icon}
+                <span className="text-lg font-semibold">{tech.name}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
