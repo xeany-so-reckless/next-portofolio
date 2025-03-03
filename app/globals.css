@@ -13,6 +13,10 @@
     --foreground: #ededed;
   }
 }
+canvas {
+  touch-action: none;
+}
+
 .blob-cursor {
   pointer-events: none;
 }
