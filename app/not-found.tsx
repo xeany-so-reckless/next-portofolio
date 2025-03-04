@@ -29,7 +29,7 @@ export default function NotFound() {
         </FuzzyText>
 
         <p className="mt-4 text-lg md:text-xl text-gray-300">
-          Oops! Halaman yang kamu cari tidak ditemukan.
+          Oops! Halaman tidak ditemukan.
         </p>
         <Link href="/" passHref>
           <button className="mt-6 px-6 py-3 bg-[#8F86D9] text-white text-lg font-semibold rounded-lg shadow-md hover:bg-[#7a72c0] transition-all duration-300">

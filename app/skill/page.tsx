@@ -34,7 +34,7 @@ export default function TechStack() {
             disableRotation={false}
           />
         </div>
-        <div className="relative z-10 max-w-4xl mx-auto py-10">
+        <div className="relative z-10 max-w-4xl mx-auto py-10 mt-20">
           <p className="text-gray-300 mb-6">
             Berikut adalah teknologi yang saya gunakan dalam pengembangan web.
           </p>
