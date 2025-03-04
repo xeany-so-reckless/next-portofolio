@@ -24,7 +24,7 @@ export default function About() {
           <div className="w-[800px] h-[500px] max-w-[90%] max-h-[90vh] text-white flex flex-col justify-center items-center p-8 text-center overflow-hidden">
             <h2 className="text-4xl font-bold mb-4">About Me</h2>
             <FallingText
-              text={`Halo! Saya seorang Backend Developer yang memiliki passion dalam membangun sistem yang efisien, scalable, dan aman. Dengan pengalaman dalam mengembangkan aplikasi menggunakan Laravel, Node.js, dan berbagai teknologi backend lainnya, saya berfokus pada pembuatan API yang optimal, pengelolaan database yang terstruktur, serta integrasi layanan pihak ketiga seperti pembayaran dan autentikasi. Jika Anda mencari seseorang yang dapat membangun dan mengoptimalkan sistem backend, mari kita berdiskusi lebih lanjut! 🚀`}
+              text={`Halo! Saya seorang Backend Developer yang memiliki passion dalam membangun sistem yang efisien, scalable, dan aman. Dengan pengalaman dalam mengembangkan aplikasi menggunakan Laravel, Node.js, dan berbagai teknologi backend lainnya🚀.`}
               highlightWords={["Backend", "Developer", "Laravel", "Node.js", "API", "database", "keamanan"]}
               trigger="hover"
               backgroundColor="transparent"

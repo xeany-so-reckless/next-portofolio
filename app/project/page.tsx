@@ -33,7 +33,7 @@ const projects: Project[] = [
   {
     id: 3,
     title: "Game Top-Up Platform",
-    description: "Sistem top-up game dengan Midtrans.",
+    description: "Sistem top-up game dengan Midtrans dan integrasi Provider.",
     image: "/assets/project/topupgame.png",
     hoverImage: "/assets/project/topupgame-hover.png",
     link: "/notfound",
