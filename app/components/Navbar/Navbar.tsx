@@ -8,12 +8,13 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 backdrop-blur-sm dark:backdrop-blur-md shadow-md">
+    <div className="fixed top-0 left-0 w-full z-50 backdrop-blur-[1px] dark:backdrop-blur-md shadow-md">
       <nav aria-label="Main Navigation">
         <div className="max-w-screen-xl px-6 py-4 mx-auto flex items-center justify-between">
-          <Link href="/" className="text-white text-xl font-bold">
-            MyPortfolio
-          </Link>
+        <Link href="/" className="text-xl font-bold">
+          <span className="text-blue-500">My</span>{' '}
+          <span className="text-white">Portfolio</span>
+        </Link>
           <button
             className="block md:hidden text-white focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
@@ -26,23 +27,31 @@ export default function Navbar() {
             }`}
           >
             <li>
-              <Link href="/" className="text-white hover:underline">
-                Home
+              <Link href="/" className="relative text-white px-4 py-2 rounded-lg transition duration-300 ease-in-out 
+                                        before:absolute before:inset-0 before:bg-blue-700 before:scale-x-0 before:origin-left 
+                                        before:transition-transform before:duration-300 hover:before:scale-x-100 before:rounded-full">
+                <span className="relative z-10">Home</span>
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-white hover:underline">
-                About Me
+              <Link href="/about" className="relative text-white px-4 py-2 rounded-lg transition duration-300 ease-in-out 
+                                            before:absolute before:inset-0 before:bg-blue-700 before:scale-x-0 before:origin-left 
+                                            before:transition-transform before:duration-300 hover:before:scale-x-100 before:rounded-full">
+                <span className="relative z-10">About me</span>
               </Link>
             </li>
             <li>
-              <Link href="/project" className="text-white hover:underline">
-                Projects
+              <Link href="/project" className="relative text-white px-4 py-2 rounded-lg transition duration-300 ease-in-out 
+                                              before:absolute before:inset-0 before:bg-blue-700 before:scale-x-0 before:origin-left 
+                                              before:transition-transform before:duration-300 hover:before:scale-x-100 before:rounded-full">
+                <span className="relative z-10">Projects</span>
               </Link>
             </li>
             <li>
-              <Link href="/skill" className="text-white hover:underline">
-                Skill
+              <Link href="/skill" className="relative text-white px-4 py-2 rounded-lg transition duration-300 ease-in-out 
+                                              before:absolute before:inset-0 before:bg-blue-700 before:scale-x-0 before:origin-left 
+                                              before:transition-transform before:duration-300 hover:before:scale-x-100 before:rounded-full">
+                <span className="relative z-10">Skills</span>
               </Link>
             </li>
           </ul>

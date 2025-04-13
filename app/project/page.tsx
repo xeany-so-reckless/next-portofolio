@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
-import Particles from "../components/Particles/Particles";
 import Navbar from "../components/Navbar/Navbar";
 import Image from "next/image";
 import Link from "next/link";
+import Squares from "../components/Squares/Squares";
 
 interface Project {
   id: number;
@@ -17,25 +17,25 @@ const projects: Project[] = [
   {
     id: 1,
     title: "E-Commerce Website",
-    description: "Platform belanja online dengan fitur lengkap.",
+    description: "Platform belanja online dengan fitur lengkap menggunakan PHP Native (2022)",
     image: "/assets/project/ecommerce.png",
     hoverImage: "/assets/project/ecommerce-hover.png",
     link: "/notfound",
   },
   {
     id: 2,
-    title: " Another E-Commerce Website",
-    description: "Platform belanja online dengan fitur lengkap.",
-    image: "/assets/project/ecommerce2.png",
-    hoverImage: "/assets/project/ecommerce2-hover.png",
+    title: " Sistem Presensi Karyawan",
+    description: "Aplikasi presensi karyawan lengkap menggunakan Flutter & Laravel (2024)",
+    image: "/assets/project/presensi.png",
+    hoverImage: "/assets/project/presensi-hover.png",
     link: "/notfound",
   },
   {
     id: 3,
-    title: "Game Top-Up Platform",
-    description: "Sistem top-up game dengan Midtrans dan integrasi Provider.",
-    image: "/assets/project/topupgame.png",
-    hoverImage: "/assets/project/topupgame-hover.png",
+    title: "Social Media App",
+    description: "Aplikasi media sosial sederhana menggunakan Flutter & Firebase (2025)",
+    image: "/assets/project/sosmed.png",
+    hoverImage: "/assets/project/sosmed-hover.png",
     link: "/notfound",
   },
 ];
@@ -44,17 +44,14 @@ export default function ProjectPage() {
   return (
     <div className="relative z-20 overflow-hidden">
       <Navbar />
-      <div className="min-h-screen overflow-x-hidden bg-[#100948] flex flex-col items-center px-4 py-12">
+      <div className="min-h-screen overflow-x-hidden bg-black flex flex-col items-center px-4 py-12">
         <div className="absolute inset-0 w-full h-full">
-          <Particles
-            particleColors={["#8F86D9", "#ffffff"]}
-            particleCount={2000}
-            particleSpread={8}
-            speed={0.1}
-            particleBaseSize={50}
-            moveParticlesOnHover={true}
-            alphaParticles={false}
-            disableRotation={false}
+        <Squares 
+          speed={0.5} 
+          squareSize={40}
+          direction='diagonal' // up, down, left, right, diagonal
+          borderColor='#687090'
+          hoverFillColor='#222'
           />
         </div>
         <div className="container mx-auto relative z-10 mt-[64px]">
@@ -77,7 +74,7 @@ function ProjectCard({ project }: { project: Project }) {
 
   return (
     <div
-      className="relative p-6 rounded-lg shadow-lg bg-transparent backdrop border border-white/5 transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+      className="relative p-6 rounded-lg shadow-lg bg-black/5 backdrop-blur-sm border border-black/10 transform transition duration-300 hover:scale-105 hover:shadow-2xl"
       onMouseEnter={() => setCurrentImage(project.hoverImage)}
       onMouseLeave={() => setCurrentImage(project.image)}
     >
@@ -95,7 +92,7 @@ function ProjectCard({ project }: { project: Project }) {
       <Link
         href={project.link}
         target={project.link.startsWith("http") ? "_blank" : "_self"}
-        className="inline-block mt-4 text-[#8F86D9] font-semibold hover:underline"
+        className="inline-block mt-4 text-blue-500 font-semibold hover:underline"
       >
         View Project →
       </Link>
