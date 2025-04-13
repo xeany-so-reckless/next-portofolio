@@ -107,7 +107,7 @@ export default function Home() {
               </div>
             </div>
             <div className="md:col-span-6 flex justify-center items-center mt-[-120px]">
-              <Lanyard position={[0, 0, 13]} gravity={[0, -30, 0]} />
+              <Lanyard position={[0, 0, 13]} gravity={[0, -20, 0]} />
             </div>
           </div>
         </div>
