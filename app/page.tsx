@@ -106,7 +106,7 @@ export default function Home() {
               </a>
               </div>
             </div>
-            <div className="md:col-span-6 flex justify-center items-center mt-[-300px] md:mt-[5px]">
+            <div className="md:col-span-6 flex justify-center items-center mt-[-300px] md:mt-0">
               <Lanyard position={[0, 0, 12]} gravity={[0, -20, 0]} />
             </div>
           </div>
