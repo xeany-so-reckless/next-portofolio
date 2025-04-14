@@ -52,7 +52,7 @@ export default function Home() {
                   onAnimationComplete={handleAnimationComplete}
                   className="text-3xl md:text-4xl font-bold mb-4 md:mb-8 text-white truncate max-w-full whitespace-nowrap overflow-hidden"
                 />
-                <div style={{position: 'relative', height: '150px'}}>
+                <div style={{position: 'relative', height: '150px'}} className="z-50">
                   <TextPressure
                     text="Mobile Developer"
                     flex={true}
@@ -67,7 +67,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="flex flex-col md:flex-row items-center gap-2 md:gap-3 z-50">
+              <div className="flex flex-col md:flex-row items-center gap-2 mt-[-10px] md:gap-3 z-50">
                 <h1 className="text-lg md:text-xl text-white font-bold text-center md:text-left">
                   I'm Ready For Job
                 </h1>
@@ -106,8 +106,8 @@ export default function Home() {
               </a>
               </div>
             </div>
-            <div className="md:col-span-6 flex justify-center items-center mt-[-120px]">
-              <Lanyard position={[0, 0, 13]} gravity={[0, -30, 0]} />
+            <div className="md:col-span-6 flex justify-center items-center mt-[-300px] md:mt-[5px]">
+              <Lanyard position={[0, 0, 12]} gravity={[0, -20, 0]} />
             </div>
           </div>
         </div>
